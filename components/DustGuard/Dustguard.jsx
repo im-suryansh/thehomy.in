@@ -122,7 +122,7 @@ const Dustguard = () => {
 			return (
 				<>
 					<div className="drop-btn-cb">
-						<h5>Breakfast</h5>
+						<h5>Morning</h5>
 						<label>
 							<input
 								type="checkbox"
@@ -138,34 +138,6 @@ const Dustguard = () => {
 								onChange={handleButton1CheckboxChange2}
 							/>
 							9:00 AM to 11:00 AM
-						</label>
-					</div>
-					<div className="drop-btn-cb">
-						<h5>Lunch</h5>
-
-						<label>
-							<input
-								type="checkbox"
-								checked={button2Checkbox1}
-								onChange={handleButton2CheckboxChange1}
-							/>
-							11:00 AM to 1:00 PM
-						</label>
-						<label>
-							<input
-								type="checkbox"
-								checked={button2Checkbox2}
-								onChange={handleButton2CheckboxChange2}
-							/>
-							1:00 PM to 3:00 PM
-						</label>
-						<label>
-							<input
-								type="checkbox"
-								checked={button2Checkbox3}
-								onChange={handleButton2CheckboxChange3}
-							/>
-							3:00 PM to 5:00 PM
 						</label>
 					</div>
 				</>
@@ -173,26 +145,7 @@ const Dustguard = () => {
 		} else if (selectedButton === "button2") {
 			return (
 				<div className="drop-btn-cb">
-					<div className="drop-btn-cb">
-						<h5>Breakfast</h5>
-						<label>
-							<input
-								type="checkbox"
-								checked={button1Checkbox1}
-								onChange={handleButton1CheckboxChange1}
-							/>
-							7:00 AM to 9:00 AM
-						</label>
-						<label>
-							<input
-								type="checkbox"
-								checked={button1Checkbox2}
-								onChange={handleButton1CheckboxChange2}
-							/>
-							9:00 AM to 11:00 AM
-						</label>
-					</div>
-					<h5>Lunch</h5>
+					<h5>Afternoon</h5>
 
 					<label>
 						<input
@@ -218,56 +171,20 @@ const Dustguard = () => {
 						/>
 						3:00 PM to 5:00 PM
 					</label>
-					<h5>Dinner</h5>
-
-					<label>
-						<input
-							type="checkbox"
-							checked={button3Checkbox1}
-							onChange={handleButton3CheckboxChange1}
-						/>
-						6:00 PM to 7:00 PM
-					</label>
-					<label>
-						<input
-							type="checkbox"
-							checked={button3Checkbox2}
-							onChange={handleButton3CheckboxChange2}
-						/>
-						7:00 PM to 8:00 PM
-					</label>
-					<label>
-						<input
-							type="checkbox"
-							checked={button3Checkbox3}
-							onChange={handleButton3CheckboxChange3}
-						/>
-						8:00 PM to 9:00 PM
-					</label>
 				</div>
 			);
 		} else if (selectedButton === "button3") {
 			return (
 				<div className="drop-btn-cb">
-					<h5>Breakfast</h5>
+					<h5>Evening</h5>
 					<label>
 						<input
 							type="checkbox"
-							checked={button1Checkbox1}
-							onChange={handleButton1CheckboxChange1}
+							checked={button3Checkbox3}
+							onChange={handleButton3CheckboxChange3}
 						/>
-						7:00 AM to 9:00 AM
+						4:00 PM to 5:00 PM
 					</label>
-					<label>
-						<input
-							type="checkbox"
-							checked={button1Checkbox2}
-							onChange={handleButton1CheckboxChange2}
-						/>
-						9:00 AM to 11:00 AM
-					</label>
-
-					<h5>Dinner</h5>
 
 					<label>
 						<input
@@ -275,7 +192,7 @@ const Dustguard = () => {
 							checked={button3Checkbox1}
 							onChange={handleButton3CheckboxChange1}
 						/>
-						6:00 PM to 7:00 PM
+						5:00 PM to 6:00 PM
 					</label>
 					<label>
 						<input
@@ -283,15 +200,7 @@ const Dustguard = () => {
 							checked={button3Checkbox2}
 							onChange={handleButton3CheckboxChange2}
 						/>
-						7:00 PM to 8:00 PM
-					</label>
-					<label>
-						<input
-							type="checkbox"
-							checked={button3Checkbox3}
-							onChange={handleButton3CheckboxChange3}
-						/>
-						8:00 PM to 9:00 PM
+						6:00 PM to 7:00 PM
 					</label>
 				</div>
 			);
@@ -355,95 +264,90 @@ const Dustguard = () => {
 									Starting price at{" "}
 									<span className="red">₹ 499</span>
 								</p>
-								
+
 								<p class="ccard-info red">{selectedOption1}</p>
 							</div>
 						</div>
-						<div
+						<form
 							className={`pop-up ${isPopupOpen1 ? "active" : ""}`}
 						>
 							{isPopupOpen1 && (
 								<div className="main-popup">
-								<div className="popup-menu">
-									<h1 className="red center">HOMY</h1>
-									<div
-										onClick={() => {
-											handleClick;
-											handleOptionSelect1("Daily");
-										}}
-									>
-										<div className="pop-up-option">
-											<h2>Daily</h2>
-											
-											<p> ₹ 499</p>
+									<div className="popup-menu">
+										<h1 className="red center">HOMY</h1>
+										<div
+											onClick={() => {
+												handleClick;
+												handleOptionSelect1("Daily");
+											}}
+										>
+											<div className="pop-up-option">
+												<h2>Daily</h2>
+
+												<p> ₹ 499</p>
+											</div>
+											<hr className="mb-1" />
 										</div>
-										<hr className="mb-1" />
-
-									</div>
-									<div
-										onClick={() =>
-											handleOptionSelect1("Weekly")
-										}
-									>
-										<div className="pop-up-option">
-											<h2>Weekly</h2>
-											<p> ₹ 1899
-</p>
+										<div
+											onClick={() =>
+												handleOptionSelect1("Weekly")
+											}
+										>
+											<div className="pop-up-option">
+												<h2>Weekly</h2>
+												<p> ₹ 1899</p>
+											</div>
+											<hr className="mb-1" />
 										</div>
-										<hr className="mb-1" />
-
-									</div>
-									<div
-										onClick={() =>
-											handleOptionSelect1("Monthly")
-										}
-									>
-										<div className="pop-up-option">
-											<h2>Monthly</h2>
-											<p> ₹ 4049</p>
+										<div
+											onClick={() =>
+												handleOptionSelect1("Monthly")
+											}
+										>
+											<div className="pop-up-option">
+												<h2>Monthly</h2>
+												<p> ₹ 4049</p>
+											</div>
+											<hr className="mb-1" />
 										</div>
-										<hr className="mb-1" />
-
-									</div>
-									<div
-										onClick={() =>
-											handleOptionSelect1("Half Yearly")
-										}
-									>
-										<div className="pop-up-option">
-											<h2>Half Yearly</h2>
-											<p> ₹ 20249</p>
+										<div
+											onClick={() =>
+												handleOptionSelect1(
+													"Half Yearly"
+												)
+											}
+										>
+											<div className="pop-up-option">
+												<h2>Half Yearly</h2>
+												<p> ₹ 20249</p>
+											</div>
+											<hr className="mb-1" />
 										</div>
-										<hr className="mb-1" />
-
-									</div>
-									<div
-										onClick={() =>
-											handleOptionSelect1("Yearly")
-										}
-									>
-										<div className="pop-up-option">
-											<h2>Yearly</h2>
-											<p> ₹ 32399</p>
-											
+										<div
+											onClick={() =>
+												handleOptionSelect1("Yearly")
+											}
+										>
+											<div className="pop-up-option">
+												<h2>Yearly</h2>
+												<p> ₹ 32399</p>
+											</div>
+											<hr className="mb-1" />
 										</div>
-										<hr className="mb-1" />
 
+										<span className="pop-up-selected">
+											Selected Option: {selectedOption1}
+										</span>
+										<button
+											className="close-button"
+											onClick={() => {
+												setPopupOpen1(false);
+											}}
+										>
+											<IoMdClose />
+										</button>
 									</div>
-
-									<span className="pop-up-selected">
-										Selected Option: {selectedOption1}
-									</span>
-									<button
-										className="close-button"
-										onClick={() => {
-											setPopupOpen1(false);
-										}}
-									>
-										<IoMdClose />
-									</button>
-								</div>
-								<div className="pop-up-timing">
+									<div className="pop-up-timing">
 										<div className="form-head">
 											<h className="red ">Time Slots</h>
 										</div>
@@ -458,7 +362,7 @@ const Dustguard = () => {
 														)
 													}
 												>
-													Breakfast & Lunch
+													Morning
 												</button>
 												{selectedButton === "button1" &&
 													renderCheckboxes()}
@@ -475,7 +379,7 @@ const Dustguard = () => {
 														)
 													}
 												>
-													Breakfast, Lunch & Dinner
+													Afternoon
 												</button>
 												{selectedButton === "button2" &&
 													renderCheckboxes()}
@@ -492,28 +396,32 @@ const Dustguard = () => {
 														)
 													}
 												>
-													Breakfast & Dinner
+													Evening
 												</button>
 												{selectedButton === "button3" &&
 													renderCheckboxes()}
 											</div>
 										</div>
 										{/* Buttons */}
-										<Link to="/checkout" style={{ textDecorationLine: "none" }}>
-
-										<div className="sub-res">
-											<button
-												type="submit"
-												className="loginbtn"
-											>
-												Submit
-											</button>
-										</div>
+										<Link
+											to="/checkout"
+											style={{
+												textDecorationLine: "none",
+											}}
+										>
+											<div className="sub-res">
+												<button
+													type="submit"
+													className="loginbtn"
+												>
+													Submit
+												</button>
+											</div>
 										</Link>
 									</div>
 								</div>
 							)}
-						</div>
+						</form>
 
 						<div
 							className="ccard"
@@ -529,7 +437,7 @@ const Dustguard = () => {
 							</div>
 							{/* <button class="ccard-button">More info</button> */}
 						</div>
-						<div
+						<form
 							className={`pop-up ${isPopupOpen2 ? "active" : ""}`}
 						>
 							{isPopupOpen2 && (
@@ -545,8 +453,7 @@ const Dustguard = () => {
 												<h2>Daily</h2>
 												<p> ₹ 899</p>
 											</div>
-										<hr className="mb-1" />
-
+											<hr className="mb-1" />
 										</div>
 										<div
 											onClick={() =>
@@ -557,8 +464,7 @@ const Dustguard = () => {
 												<h2>Weekly</h2>
 												<p> ₹ 3779</p>
 											</div>
-										<hr className="mb-1" />
-
+											<hr className="mb-1" />
 										</div>
 										<div
 											onClick={() =>
@@ -569,8 +475,7 @@ const Dustguard = () => {
 												<h2>Monthly</h2>
 												<p> ₹ 8099</p>
 											</div>
-										<hr className="mb-1" />
-
+											<hr className="mb-1" />
 										</div>
 										<div
 											onClick={() =>
@@ -583,8 +488,7 @@ const Dustguard = () => {
 												<h2>Half Yearly</h2>
 												<p> ₹ 40499</p>
 											</div>
-										<hr className="mb-1" />
-
+											<hr className="mb-1" />
 										</div>
 										<div
 											onClick={() =>
@@ -595,8 +499,7 @@ const Dustguard = () => {
 												<h2>Yearly</h2>
 												<p> ₹ 64800</p>
 											</div>
-										<hr className="mb-1" />
-
+											<hr className="mb-1" />
 										</div>
 
 										<h2 className="pop-up-selected">
@@ -625,7 +528,7 @@ const Dustguard = () => {
 														)
 													}
 												>
-													Breakfast & Lunch
+													Morning
 												</button>
 												{selectedButton === "button1" &&
 													renderCheckboxes()}
@@ -642,7 +545,7 @@ const Dustguard = () => {
 														)
 													}
 												>
-													Breakfast, Lunch & Dinner
+													Afternoon
 												</button>
 												{selectedButton === "button2" &&
 													renderCheckboxes()}
@@ -659,28 +562,32 @@ const Dustguard = () => {
 														)
 													}
 												>
-													Breakfast & Dinner
+													Evening
 												</button>
 												{selectedButton === "button3" &&
 													renderCheckboxes()}
 											</div>
 										</div>
 										{/* Buttons */}
-										<Link to="/checkout" style={{ textDecorationLine: "none" }}>
-
-										<div className="sub-res">
-											<button
-												type="submit"
-												className="loginbtn"
-											>
-												Submit
-											</button>
-										</div>
+										<Link
+											to="/checkout"
+											style={{
+												textDecorationLine: "none",
+											}}
+										>
+											<div className="sub-res">
+												<button
+													type="submit"
+													className="loginbtn"
+												>
+													Submit
+												</button>
+											</div>
 										</Link>
 									</div>
 								</div>
 							)}
-						</div>
+						</form>
 						<div
 							className="ccard"
 							onClick={() => setPopupOpen3(true)}
@@ -695,90 +602,82 @@ const Dustguard = () => {
 							</div>
 							{/* <button class="ccard-button">More info</button> */}
 						</div>
-						<div
+						<form
 							className={`pop-up ${isPopupOpen3 ? "active" : ""}`}
 						>
 							{isPopupOpen3 && (
-					<div className="main-popup">
-
-								<div className="popup-menu">
-									<h1 className="red">HOMY PRO MAX</h1>
-									<div
-										onClick={() =>
-											handleOptionSelect3("Daily")
-										}
-									>
-										<div className="pop-up-option">
-											<h2>Daily</h2>
-											<p> ₹ 1349</p>
+								<div className="main-popup">
+									<div className="popup-menu">
+										<h1 className="red">HOMY PRO MAX</h1>
+										<div
+											onClick={() =>
+												handleOptionSelect3("Daily")
+											}
+										>
+											<div className="pop-up-option">
+												<h2>Daily</h2>
+												<p> ₹ 1349</p>
+											</div>
+											<hr className="mb-1" />
 										</div>
-										<hr className="mb-1" />
-
-									</div>
-									<div
-										onClick={() =>
-											handleOptionSelect3("Weekly")
-										}
-									>
-										<div className="pop-up-option">
-											<h2>Weekly</h2>
-											<p> ₹ 5,669</p>
+										<div
+											onClick={() =>
+												handleOptionSelect3("Weekly")
+											}
+										>
+											<div className="pop-up-option">
+												<h2>Weekly</h2>
+												<p> ₹ 5,669</p>
+											</div>
+											<hr className="mb-1" />
 										</div>
-										<hr className="mb-1" />
-
-									</div>
-									<div
-										onClick={() =>
-											handleOptionSelect3("Monthly")
-										}
-									>
-										<div className="pop-up-option">
-											<h2>Monthly</h2>
-											<p> ₹ 12,149</p>
-
+										<div
+											onClick={() =>
+												handleOptionSelect3("Monthly")
+											}
+										>
+											<div className="pop-up-option">
+												<h2>Monthly</h2>
+												<p> ₹ 12,149</p>
+											</div>
+											<hr className="mb-1" />
 										</div>
-										<hr className="mb-1" />
-
-
-									</div>
-									<div
-										onClick={() =>
-											handleOptionSelect3("Half Yearly")
-										}
-									>
-										<div className="pop-up-option">
-											<h2>Half Yearly</h2>
-											<p> ₹ 60,749</p>
-											
+										<div
+											onClick={() =>
+												handleOptionSelect3(
+													"Half Yearly"
+												)
+											}
+										>
+											<div className="pop-up-option">
+												<h2>Half Yearly</h2>
+												<p> ₹ 60,749</p>
+											</div>
+											<hr className="mb-1" />
 										</div>
-										<hr className="mb-1" />
-
-									</div>
-									<div
-										onClick={() =>
-											handleOptionSelect3("Yearly")
-										}
-									>
-										<div className="pop-up-option">
-											<h2>Yearly</h2>
-											<p> ₹ 97,199</p>
-
+										<div
+											onClick={() =>
+												handleOptionSelect3("Yearly")
+											}
+										>
+											<div className="pop-up-option">
+												<h2>Yearly</h2>
+												<p> ₹ 97,199</p>
+											</div>
+											<hr className="mb-1" />
 										</div>
-										<hr className="mb-1" />
 
+										<h2 className="pop-up-selected">
+											Selected Option: {selectedOption3}
+										</h2>
+										<button
+											className="close-button"
+											onClick={() => setPopupOpen3(false)}
+										>
+											<IoMdClose />
+										</button>
 									</div>
-
-									<h2 className="pop-up-selected">
-										Selected Option: {selectedOption3}
-									</h2>
-									<button
-										className="close-button"
-										onClick={() => setPopupOpen3(false)}
-									>
-										<IoMdClose />
-									</button>
-								</div>
-								<div className="pop-up-timing">
+									<div className="pop-up-timing">
 										<div className="form-head">
 											<h className="red ">Time Slots</h>
 										</div>
@@ -793,7 +692,7 @@ const Dustguard = () => {
 														)
 													}
 												>
-													Breakfast & Lunch
+													Morning
 												</button>
 												{selectedButton === "button1" &&
 													renderCheckboxes()}
@@ -810,7 +709,7 @@ const Dustguard = () => {
 														)
 													}
 												>
-													Breakfast, Lunch & Dinner
+													Afternoon
 												</button>
 												{selectedButton === "button2" &&
 													renderCheckboxes()}
@@ -827,29 +726,33 @@ const Dustguard = () => {
 														)
 													}
 												>
-													Breakfast & Dinner
+													Evening
 												</button>
 												{selectedButton === "button3" &&
 													renderCheckboxes()}
 											</div>
 										</div>
 										{/* Buttons */}
-										<Link to="/checkout" style={{ textDecorationLine: "none" }}>
-										<div className="sub-res">
-											<button	
-												type="submit"
-												className="loginbtn"
-											>
-												Submit
-											</button>
-										</div>
+										<Link
+											to="/checkout"
+											style={{
+												textDecorationLine: "none",
+											}}
+										>
+											<div className="sub-res">
+												<button
+													type="submit"
+													className="loginbtn"
+												>
+													Submit
+												</button>
+											</div>
 										</Link>
 									</div>
 								</div>
 							)}
-						</div>
+						</form>
 					</div>
-			
 				</div>
 
 				<img className="cookimg" src="../../public/temp4.png" alt="" />

@@ -359,7 +359,7 @@ const CookPage = () => {
 								<p class="ccard-info red">{selectedOption1}</p>
 							</div>
 						</div>
-						<div
+						<form
 							className={`pop-up ${isPopupOpen1 ? "active" : ""}`}
 						>
 							{isPopupOpen1 && (
@@ -474,7 +474,7 @@ const CookPage = () => {
 														)
 													}
 												>
-													Breakfast, Lunch & Dinner
+													All 3 Meals
 												</button>
 												{selectedButton === "button2" &&
 													renderCheckboxes()}
@@ -512,7 +512,7 @@ const CookPage = () => {
 									</div>
 								</div>
 							)}
-						</div>
+						</form>
 
 						<div
 							className="ccard"
@@ -528,7 +528,7 @@ const CookPage = () => {
 							</div>
 							{/* <button class="ccard-button">More info</button> */}
 						</div>
-						<div
+						<form
 							className={`pop-up ${isPopupOpen2 ? "active" : ""}`}
 						>
 							{isPopupOpen2 && (
@@ -641,7 +641,7 @@ const CookPage = () => {
 														)
 													}
 												>
-													Breakfast, Lunch & Dinner
+													All 3 Meals
 												</button>
 												{selectedButton === "button2" &&
 													renderCheckboxes()}
@@ -679,7 +679,7 @@ const CookPage = () => {
 									</div>
 								</div>
 							)}
-						</div>
+						</form>
 						<div
 							className="ccard"
 							onClick={() => setPopupOpen3(true)}
@@ -694,7 +694,7 @@ const CookPage = () => {
 							</div>
 							{/* <button class="ccard-button">More info</button> */}
 						</div>
-						<div
+						<form
 							className={`pop-up ${isPopupOpen3 ? "active" : ""}`}
 						>
 							{isPopupOpen3 && (
@@ -807,7 +807,7 @@ const CookPage = () => {
 														)
 													}
 												>
-													Breakfast, Lunch & Dinner
+													All 3 Meals
 												</button>
 												{selectedButton === "button2" &&
 													renderCheckboxes()}
@@ -845,7 +845,7 @@ const CookPage = () => {
 									</div>
 								</div>
 							)}
-						</div>
+						</form>
 					</div>
 			
 				</div>

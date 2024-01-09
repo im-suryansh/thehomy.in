@@ -1,5 +1,6 @@
 import React from "react";
 import "./SignUp.css";
+import { GiIndiaGate } from "react-icons/gi";
 import { IoMdPerson } from "react-icons/io";
 import { MdLock } from "react-icons/md";
 import { Link } from "react-router-dom";
@@ -24,20 +25,20 @@ function Login() {
 					/>
 				</div>
 				<div className="flex-column">
-					<label>Email </label>
+					<label>Contact number</label>
 				</div>
 				<div className="sinputForm">
 					<h6>
-						<MdOutlineAlternateEmail />
+						<GiIndiaGate />
 					</h6>
 					<input
 						type="text"
 						className="input"
-						placeholder="Enter your Email"
+						placeholder="+91 Enter your registered number"
 					/>
 				</div>
 				<div className="flex-column">
-					<label>Password </label>
+					<label>OTP </label>
 				</div>
 				<div className="sinputForm">
 					<h6>
@@ -47,22 +48,12 @@ function Login() {
 					<input
 						type="password"
 						className="input"
-						placeholder="Enter your Password"
+						placeholder="Enter One Time Password"
 					/>
 				</div>
-				<div className="flex-column">
-					<label>Confirm Password </label>
-				</div>
-				<div className="sinputForm">
-					<h6>
-						<MdLock />
-					</h6>
-
-					<input
-						type="password"
-						className="input"
-						placeholder="Confirm your Password"
-					/>
+				<span className="login-text">OR</span>
+				<div type="button" className="login-with-google-btn">
+					Sign in with Google
 				</div>
 				
 				<button className="button-submit">Continue to Home</button>

@@ -24,22 +24,8 @@ function Login() {
 						placeholder="+91 Enter your registered number"
 					/>
 				</div>
-				<span className="login-text">OR</span>
 				<div className="flex-column">
-					<label>Email </label>
-				</div>
-				<div className="sinputForm">
-					<h6>
-						<MdOutlineAlternateEmail />
-					</h6>
-					<input
-						type="text"
-						className="input"
-						placeholder="Enter your Email"
-					/>
-				</div>
-				<div className="flex-column">
-					<label>Password </label>
+					<label>OTP </label>
 				</div>
 				<div className="sinputForm">
 					<h6>
@@ -49,20 +35,24 @@ function Login() {
 					<input
 						type="password"
 						className="input"
-						placeholder="Enter your Password"
+						placeholder="Enter One Time Password"
 					/>
 				</div>
 
 				<span className="login-text">OR</span>
 				<div type="button" className="login-with-google-btn">
-					Sign in with Google
+					Login with Google
 				</div>
 				<button className="button-submit">Login</button>
 				<h6>
 					Not a user?
-					<Link to="/signup"
-					style={{ color: "red", textDecorationLine: "none" }}
-					>   Sign up</Link>
+					<Link
+						to="/signup"
+						style={{ color: "red", textDecorationLine: "none" }}
+					>
+						{" "}
+						Sign up
+					</Link>
 				</h6>
 			</form>
 		</div>
