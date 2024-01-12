@@ -23,6 +23,7 @@ import Checkout from "../components/Checkout";
 import Dashboard from "../components/Dashboard/Dashboard";
 import FeebackForm from "../components/FeedbackForm";
 import Hygiene from "../components/Hygiene";
+import OTP from "../components/OTP";
 
 
 function App() {
@@ -190,6 +191,28 @@ function App() {
 								<Support />
 								{<Navbar />}
 								<Checkout />
+								<Footer />
+							</>
+						}
+					/>
+					<Route
+						path="login/verify"
+						element={
+							<>
+								<Support />
+								{<Navbar />}
+								<OTP />
+								<Footer />
+							</>
+						}
+					/>
+					<Route
+						path="signup/verify"
+						element={
+							<>
+								<Support />
+								{<Navbar />}
+								<OTP />
 								<Footer />
 							</>
 						}

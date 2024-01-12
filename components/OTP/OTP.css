@@ -1,0 +1,97 @@
+:root {
+	--BaseBG: #ffffff;
+}
+
+.OTP-page {
+	height: 90vh;
+	margin: 0;
+	font-weight: 400;
+	background-color: var(--BaseBG);
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+}
+
+.digit-group input {
+	width: 30px;
+	height: 50px;
+	background-color: lighten(#e23744, 5%);
+	border: none;
+	line-height: 50px;
+	text-align: center;
+	font-size: 24px;
+	font-weight: 200;
+	color: e23744;
+	margin: 0 2px;
+}
+
+.OTP-container {
+	height: 604px;
+	width: 600px;
+	border-radius: 10px;
+	border: 4px solid black;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+}
+.OTP-heading {
+	font-size: 48px;
+	font-weight: 600;
+	margin-bottom: 20px;
+	position: relative;
+	top: -100px;
+}
+.digit-group,
+.prompt,
+.User-contact {
+	position: relative;
+	top: -50px;
+}
+.User-contact {
+	margin-bottom: 40px;
+	margin-top: 0px;
+}
+.digit-group,
+.splitter {
+	padding: 0 5px;
+	color: black;
+	font-size: 24px;
+}
+
+.prompt {
+	font-size: 24px;
+	color: #e23744;
+}
+
+#digit-1,
+#digit-2,
+#digit-3,
+#digit-4,
+#digit-5,
+#digit-6 {
+	background-color: #d9d9d9;
+	color: black;
+}
+.resend {
+	cursor: pointer;
+}
+
+@media (max-width:600px){
+
+  .OTP-container{
+    border: none;
+  }
+  .OTP-heading{
+    font-size: 42px;
+    margin-bottom: 10px;
+  }
+  .prompt{
+    font-size: 18px;
+    margin-bottom: 0px;
+  }
+  .OTP-page{
+    height: 70vh;
+  }
+}

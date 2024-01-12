@@ -3,6 +3,7 @@
 	/* background-image: url("../../public/signup.jpg"); */
   	/* background-size: cover; */
 	display: flex;
+ height: 90vh; 
 
 	justify-content: center;
 	align-items: center;

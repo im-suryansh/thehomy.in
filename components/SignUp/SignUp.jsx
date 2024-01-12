@@ -37,7 +37,7 @@ function Login() {
 						placeholder="+91 Enter your registered number"
 					/>
 				</div>
-				<div className="flex-column">
+				{/* <div className="flex-column">
 					<label>OTP </label>
 				</div>
 				<div className="sinputForm">
@@ -50,13 +50,14 @@ function Login() {
 						className="input"
 						placeholder="Enter One Time Password"
 					/>
-				</div>
+				</div> */}
 				<span className="login-text">OR</span>
 				<div type="button" className="login-with-google-btn">
 					Sign in with Google
 				</div>
-				
-				<button className="button-submit">Continue to Home</button>
+				<Link to='verify'>
+				<button className="button-submit">Continue</button>
+				</Link>
 				<h6>
 					Existing user?
 					<Link to="/login"
